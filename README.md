@@ -146,31 +146,31 @@ _http://localhost:8090/health_
 This application have been structured thinking of future changes, this is the schema:
 ```
 .
-├── cmd							//Package of main aplications
-│   ├── client.go  				//Client for acceptance test
-│   └── main.go 				//Entry point of app
+├── cmd					//Package of main aplications
+│   ├── client.go  			//Client for acceptance test
+│   └── main.go 			//Entry point of app
 ├── docker-compose.yml 			//Definition to stand up everything and make automatic request
-├── Dockerfile 					//App docker definition
+├── Dockerfile 				//App docker definition
 ├── DockerfileClient 			//Client container definition
 ├── go.mod
 ├── go.sum
-├── Makefile 					//To make commands like build or test in more abstract way
-├── pkg 						//App principal packages
-│   ├── api 					//API public structs
+├── Makefile 				//To make commands like build or test in more abstract way
+├── pkg 				//App principal packages
+│   ├── api 				//API public structs
 │   │   └── model.go
-│   ├── health 					//The health handler
+│   ├── health 				//The health handler
 │   │   └── health.go
-│   ├── server 					//Logic with server and mapping handler
+│   ├── server 				//Logic with server and mapping handler
 │   │   ├── handler.go 			//Get requests and convert to data for application logic
 │   │   ├── handler_test.go
 │   │   └── server.go 
-│   └── trip 					//Main logic
+│   └── trip 				//Main logic
 │       ├── city.go 			//City Implemtations, get the city names
 │       ├── city_test.go
 │       ├── trip.go 			//Trip Implementations
 │       └── trip_test.go
 ├── README.md
-└── resources 					//resource files, like cities file and configuration
+└── resources 				//resource files, like cities file and configuration
     ├── cities.txt
     └── config.env 
 ```
